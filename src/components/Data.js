@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {BiLabel} from 'react-icons/bi'
 import {VscMilestone, VscIssues } from 'react-icons/vsc'
 import '../styles/app.css'
@@ -6,15 +6,14 @@ import {MdArrowDropDown} from 'react-icons/md'
 
 const Data = () => {
 
-    // const [data, setData] = useState([]);
+    const [issue, setIssue] = useState([]);
 
-    // const handleIssue = async () => { 
-    //     const endpoint = `https://api.github.com/repos/github/codeql/issues`;
-    //     const res = await fetch(endpoint)
-    //     const data = await res.json()
-    //     console.log(data);
-    //     setData(data)
-    // }
+    useEffect(() => {
+        const endpoint = `https://api.github.com/repos/github/codeql/issues`;
+        fetch(endpoint)
+        .then(res => res.json())
+        .then(data => setIssue(data))
+    }, [])
 
     return (
         <div className='data'>
@@ -46,9 +45,30 @@ const Data = () => {
                                 <a href='# '>Sort <MdArrowDropDown /></a>
                             </div>
                         </div>
-                        <div className='data-list'>
-                            <p>[False positive] on_decorated_ magic methods</p>
-                        </div>
+                        
+                        {
+                            issue.map((item) => {
+                                return (
+                                    <div className='data-list'>
+                                        <div className='oneD'>
+                                            <a href={item.url} className="title"><VscIssues className='open' /> {item.title}</a>
+                                            <span className='span'>#{item.id} opened by {item.user.login}</span>                                 
+                                            
+                                            {/* <span className='label'>
+                                                {item.labels.map((label) => {
+                                                    return (
+                                                        <a href={item.labels_url} className='label' style={{color: `${label.color}`}}>{label.name}</a>
+                                                    )
+                                                })}
+                                            </span> */}
+                                        </div>
+                                        <div className=''>
+                                            <a href={item.user.url} target="_blanks" ><img src={item.user.avatar_url} alt="avatar" className="pic"/></a>
+                                        </div>   
+                                    </div>
+                                )
+                            })
+                        }
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 .app {
     background: #0D1117;
     color: white;
-    height: 100vh;
+    height: 100%;
 }
 
 /* header.js */
@@ -217,7 +217,6 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 5px;
 }
 
 h4 {
@@ -256,17 +255,16 @@ h4 {
     border-radius: 8px;
 }
 
-.data{
-    margin: 0px auto;
-}
 
 .info {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    outline: 0.5px solid #ffffff7a; 
     background: #161B22;
     border-radius: 5px;
     padding: 2px 20px;
+    margin-top: 10px;
     font-size: 1.1rem;
 }
 
@@ -289,4 +287,89 @@ h4 {
     opacity: 1;
 }
 
+.data-list {
+    display: flex;
+    height: 86px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    outline-offset: 0px;
+    outline: 0.5px solid #ffffff7a; 
+}
+
+.data-list:hover {
+    background: #161B22;
+}
+
+.oneD {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.05rem;
+}
+
+.title:hover {
+    color: blue;
+}
+
+.open {
+    color: greenyellow;
+    font-size: 1.1rem;
+}
+
+ .span {
+    font-size: 0.8rem;
+    opacity: 0.8;   
+    margin: 0px;
+}
+
+.oneD span:hover {
+    opacity: 1;
+}
+
+.label {
+    position: absolute;
+
+}
+
+.pic {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 79%;
+    border-radius: 50%;
+    
+}
+
 /* pagination.js */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto 0px auto;
+    font-size: 1.05rem;
+    padding: 30px;
+    border-top: 1px solid #ffffff7a;
+    width: 80%;
+    align-items: center;
+}
+
+.fl {
+    opacity: 0.8;
+    align-items: center;
+}
+
+.footer a{
+    color: blue;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* footer.js */
