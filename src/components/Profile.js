@@ -4,6 +4,7 @@ import {VscIssues, VscGitPullRequest, VscCommentDiscussion, VscGraphLine} from '
 import {GrProjects} from 'react-icons/gr'
 import {HiOutlineShieldExclamation} from 'react-icons/hi'
 import Data from './Data';
+import {MdArrowDropDown} from 'react-icons/md'
 
 const Profile = () => {
     return ( 
@@ -19,9 +20,9 @@ const Profile = () => {
                     </div>
                     <div className="btn-group">
                         <div>
-                            <button className='btn'><BsEyeFill className='icon'/>Watch</button>
-                            <button className='btn'>< BiGitRepoForked className='icon' />Fork</button>
-                            <button className='btn'><BsStar className='icon' />Star</button>
+                            <button className='btn'><BsEyeFill className='icon'/>Watch <MdArrowDropDown /></button>
+                            <button className='btn'>< BiGitRepoForked className='icon' />Fork <MdArrowDropDown /></button>
+                            <button className='btn'><BsStar className='icon' />Star <MdArrowDropDown /></button>
                         </div>
                     </div>
                 </div>

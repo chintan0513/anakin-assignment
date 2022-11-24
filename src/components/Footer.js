@@ -4,7 +4,7 @@ const Footer = () => {
     return ( 
         <div className='footer'>
             <div className='fl'>  
-                <p href='# '><BsGithub /> 2022 GitHub, Inc.</p>
+                <p href='# '><BsGithub className='logo' /> &copy; 2022 GitHub, Inc.</p>
             </div>
             <div className='fr'>
                 <a href='# '>Terms</a>
