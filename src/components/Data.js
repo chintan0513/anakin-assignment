@@ -2,12 +2,14 @@ import {useState, useEffect} from 'react'
 import {BiLabel} from 'react-icons/bi'
 import {VscMilestone, VscIssues } from 'react-icons/vsc'
 import '../styles/app.css'
-import {MdArrowDropDown} from 'react-icons/md'
+import {MdArrowDropDown} from 'react-icons/md';
+import ReactPaginate from 'react-paginate';
 
 const Data = () => {
 
     const [issue, setIssue] = useState([]);
-
+    const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+        
     useEffect(() => {
         const endpoint = `https://api.github.com/repos/github/codeql/issues`;
         fetch(endpoint)
