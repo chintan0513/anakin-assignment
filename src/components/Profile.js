@@ -41,6 +41,7 @@ const Profile = () => {
                 
             </div>
             <hr />
+            
             <Data />
         </>
      );

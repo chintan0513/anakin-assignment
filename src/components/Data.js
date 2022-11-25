@@ -3,19 +3,33 @@ import {BiLabel} from 'react-icons/bi'
 import {VscMilestone, VscIssues } from 'react-icons/vsc'
 import '../styles/app.css'
 import {MdArrowDropDown} from 'react-icons/md';
-import ReactPaginate from 'react-paginate';
+import Page from './Page';
+import Head from './Head';
 
 const Data = () => {
 
     const [issue, setIssue] = useState([]);
-    const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-        
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [issuePerPage] = useState(5);
+    
     useEffect(() => {
+        setLoading(true);
         const endpoint = `https://api.github.com/repos/github/codeql/issues`;
         fetch(endpoint)
         .then(res => res.json())
         .then(data => setIssue(data))
+        setLoading(false);
     }, [])
+
+    //get current issue
+    const indexOfLastPost = currentPage * issuePerPage;
+    const indexOfFirstPost = indexOfLastPost - issuePerPage;
+    const currentIssue = issue.slice(indexOfFirstPost, indexOfLastPost);
+    
+    // change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
 
     return (
         <div className='data'>
@@ -29,27 +43,11 @@ const Data = () => {
                     <button className='btn'><VscMilestone />Milestone</button>
                     <button  className='new'>New Issue</button>
                 </div>
-               
             </div>
             <div className='dbody'>
                 <div className='list'>
-                        <div className='info'>
-                            <div className='linfo links'>
-                                <h5> <VscIssues />558 Open</h5> 
-                                <a href='# '> ☑️ 952 Closed</a>
-                            </div>
-                            <div className='rinfo links'>
-                                <a href='# '>Author <MdArrowDropDown /></a>
-                                <a href='# '>Label <MdArrowDropDown /></a>
-                                <a href='# '>Projects <MdArrowDropDown /></a>
-                                <a href='# '>Milestones <MdArrowDropDown /></a>
-                                <a href='# '>Asignee <MdArrowDropDown /></a>
-                                <a href='# '>Sort <MdArrowDropDown /></a>
-                            </div>
-                        </div>
-                        
-                        {
-                            issue.map((item) => {
+                        <Head />               
+                            {loading ? <h2>Loading...</h2> : currentIssue.map((item) => {
                                 return (
                                     <div className='data-list'>
                                         <div className='oneD'>
@@ -70,9 +68,11 @@ const Data = () => {
                                     </div>
                                 )
                             })
-                        }
+                        } 
                 </div>
             </div>
+
+            <Page issuePerPage={issuePerPage} totalIssue={issue.length} paginate={paginate} />
         </div>
       );
 }

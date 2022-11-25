@@ -351,6 +351,43 @@ h4 {
 
 /* pagination.js */
 
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+ul li {
+    list-style: none;
+    margin: 0 2px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #ffffff7a;
+    background: blue;
+}
+
+.page a {
+    opacity: 0.8;   
+    font-weight: 500;
+}
+
+.page li:hover {
+    opacity: 1;
+}
+
+
+
+
+/* footer.js */
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -375,4 +412,3 @@ h4 {
     text-decoration: underline;
 }
 
-/* footer.js */
