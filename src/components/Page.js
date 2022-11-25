@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/app.css'
+import '../styles/page.css'
 
   const Items = ({issuePerPage, totalIssue,paginate}) => {
 

@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {BiLabel} from 'react-icons/bi'
 import {VscMilestone, VscIssues } from 'react-icons/vsc'
-import '../styles/app.css'
+import '../styles/data.css'
 import {MdArrowDropDown} from 'react-icons/md';
 import Page from './Page';
 import Head from './Head';

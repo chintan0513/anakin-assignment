@@ -1,6 +1,8 @@
 import {BsGithub, BsBell} from 'react-icons/bs'
 import logo from '../logo.svg';
 import {MdArrowDropDown} from 'react-icons/md'
+import '../styles/header.css'
+
 const Header = () => {
     return ( 
         <div className="header">

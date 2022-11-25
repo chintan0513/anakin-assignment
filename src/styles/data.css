@@ -1,0 +1,142 @@
+.data {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.dhead, .d-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+h4 {
+    background: rgba(240,246,252,0.1);
+    margin: 0px;
+    padding: 5px 15px;
+    gap: 0px;
+    border-radius: 5px;
+}
+
+.input {
+    margin-left: 0px;
+    width: 550px;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.d-right .btn {
+    background: transparent;
+    margin: 0px;
+    padding: 5px 10px;
+    width: 150px;
+    align-items: center;
+    border: 0.5px solid #f1f1f1;
+    font-size: 1.05rem;
+}
+
+.new {
+    color: white;
+    background: green;
+    padding: 9px 10px;
+    border: none;
+    margin-left: 20px;
+    align-items: center;
+    width: 100px;
+    border-radius: 8px;
+}
+
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    outline: 0.5px solid #ffffff7a; 
+    background: #161B22;
+    border-radius: 5px;
+    padding: 2px 20px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.linfo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rinfo {
+    align-items: center;
+}
+
+.rinfo a{
+    opacity: 0.8;
+}
+
+.rinfo a:hover {
+    opacity: 1;
+}
+
+.data-list {
+    display: flex;
+    height: 86px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    outline-offset: 0px;
+    outline: 0.5px solid #ffffff7a; 
+}
+
+.data-list:hover {
+    background: #161B22;
+}
+
+.oneD {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.05rem;
+}
+
+.title:hover {
+    color: blue;
+}
+
+.open {
+    color: greenyellow;
+    font-size: 1.1rem;
+}
+
+ .span {
+    font-size: 0.8rem;
+    opacity: 0.8;   
+    margin: 0px;
+}
+
+.oneD span:hover {
+    opacity: 1;
+}
+
+.label {
+    position: absolute;
+
+}
+
+.pic {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 79%;
+    border-radius: 50%;
+    
+}

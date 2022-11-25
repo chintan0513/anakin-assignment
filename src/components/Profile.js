@@ -5,6 +5,7 @@ import {GrProjects} from 'react-icons/gr'
 import {HiOutlineShieldExclamation} from 'react-icons/hi'
 import Data from './Data';
 import {MdArrowDropDown} from 'react-icons/md'
+import '../styles/profile.css'
 
 const Profile = () => {
     return ( 
@@ -33,15 +34,14 @@ const Profile = () => {
                         <li><VscGitPullRequest /><a href=" # "> Pull requests </a></li>
                         <li><VscCommentDiscussion /><a href=" # "> Discussion </a></li>
                         <li><BsPlayCircle /><a href=" # "> Actions </a></li>
-                        <li><a href=" # "><GrProjects /> Projects </a></li>
+                        <li><a href=" # "><GrProjects className='shield'/> Projects </a></li>
                         <li><HiOutlineShieldExclamation /><a href=" # ">Security </a></li>
                         <li><VscGraphLine /><a href=" # ">Insights </a></li>
                     </div>
                 </div>
                 
             </div>
-            <hr />
-            
+
             <Data />
         </>
      );

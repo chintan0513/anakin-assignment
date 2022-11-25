@@ -1,0 +1,78 @@
+.link {
+    padding: 5px 10px;
+    border-bottom: 0.5px solid lightgrey;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.na {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-link a{
+    color: lightskyblue;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.na p {
+    color: white;
+    border: 0.5px solid lightgrey;
+    border-radius: 10cm;
+    padding: 2px 10px;
+    font-size: 0.7rem;
+    align-items: center;
+}
+
+.btn {
+    cursor: pointer;
+    background: #21262d;
+    color: whitesmoke;
+    border-radius: 5px;
+    width: 120px;
+    font-size: 1rem;
+    padding: 3px 8px;
+    margin: 0px 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    color: white;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px 5px;
+}
+
+.head {
+    margin-top: 15px;
+}
+
+.h-link {
+    display: flex;
+    flex-direction: row;
+}
+
+.h-link li {
+    list-style: none;
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+.h-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.h-link li:hover{
+    opacity: 0.8;
+    border-radius: 5px;
+    backdrop-filter: blur(15px);
+    background: #21262d;
+}
